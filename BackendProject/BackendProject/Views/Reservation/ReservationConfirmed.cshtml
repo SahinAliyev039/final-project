@@ -1,0 +1,57 @@
+﻿@model Reservation
+
+@{
+    ViewData["Title"] = "Reservation Page";
+}
+Links{
+<link rel="stylesheet" href="~/assets/css/reservation.css" />
+}
+
+<!-- about home start -->
+<section class="about-home">
+    <div class="about-header">
+        <h2>Reservation</h2>
+        <div>
+            <ul>
+                <li class="breadcrumb-begin">
+                    <a href="/">home</a>
+                </li>
+                <li></li>
+                <li class="breadcrumb-end">
+                    <a href="/menu">menu</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- about  home end -->
+<!-- reservation section start -->
+<section class="reservation__container" style="pad">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card text-center shadow-sm" style="display:flex; justify-content:center; flex-direction:column; text-align:center; ">
+                    <div class="card-header bg-success text-white">
+                        <h1>Reservation Confirmed!</h1>
+                    </div>
+                    <div class="card-body">
+                        <p class="lead" style="font-size:40px">
+                            Your reservation has been successfully confirmed. We look forward to welcoming you!
+                        </p>
+                        <a href="/" class="btn btn-primary mt-3">
+                            Back to Home
+                        </a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Thank you for choosing our coffee shop!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- reservation section end -->
+    Script{
+<script src="~/assets/js/reservation.js"></script>
+    }

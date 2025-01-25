@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Error";
+    var errorCode = ViewData["ErrorCode"] ?? 0; // Eğer kod gelmezse varsayılan 0
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container text-center mt-5">
+    <h1 class="display-4 text-danger">
+        @if ((int)errorCode == 404)
+        {
+            <span>404 - Page Not Found</span>
+        }
+        else if ((int)errorCode == 500)
+        {
+            <span>500 - Internal Server Error</span>
+        }
+        else
+        {
+            <span>Unexpected Error</span>
+        }
+    </h1>
+    <p class="lead mt-3">
+        @if ((int)errorCode == 404)
+        {
+            <span>The page you are looking for doesn't exist.</span>
+        }
+        else if ((int)errorCode == 500)
+        {
+            <span>Something went wrong on the server.</span>
+        }
+        else
+        {
+            <span>We encountered an unexpected problem. Please try again later.</span>
+        }
+    </p>
+    <a href="/" class="btn btn-primary mt-4">Back to Home</a>
+</div>

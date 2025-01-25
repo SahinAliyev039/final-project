@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewBag.Title</title>
+	<link rel="stylesheet" href="~/assets/css/about.css" />
+
+	<!-- font awesome cdn link -->
+	<script src="https://kit.fontawesome.com/88699d56f3.js"
+			crossorigin="anonymous"></script>
+</head>
+<body>
+	<!-- scroll top start -->
+	<div id="progress">
+		<span id="progress-value">&#x1F815;</span>
+	</div>
+	<!-- scroll top end -->
+	@await Component.InvokeAsync("Header2");
+	@RenderBody()
+	@await Component.InvokeAsync("Footer");
+
+	<script src="~/assets/js/about.js"></script>
+</body>
+</html>

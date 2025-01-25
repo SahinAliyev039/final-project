@@ -1,0 +1,69 @@
+﻿@model Reservation
+
+@{
+    ViewData["Title"] = "Reservation Page";
+}
+Links{
+<link rel="stylesheet" href="~/assets/css/reservation.css" />
+}
+
+<!-- about home start -->
+<section class="about-home">
+    <div class="about-header">
+        <h2>Reservation</h2>
+        <div>
+            <ul>
+                <li class="breadcrumb-begin">
+                    <a href="index.html">home</a>
+                </li>
+                <li></li>
+                <li class="breadcrumb-end">
+                    <a href="menu.html">menu</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- about  home end -->
+<!-- reservation section start -->
+<section class="reservation__container">
+    <span class="hero1">
+        <img src="~/assets/image/hero-shape-2-1.png" alt="" />
+    </span>
+    <span class="hero2">
+        <img src="~/assets/image/hero-shape-2-2.png" alt="" />
+    </span>
+    <div class="form_item">
+        <h2>RESERVATION FORM</h2>
+
+        <form method="post" asp-action="CreateReservation" class="form">
+            <div>
+                <input asp-for="Name" placeholder="Enter your name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span> <!-- Validation for Name -->
+
+                <input asp-for="PersonCount" type="number" min="1" max="6" placeholder="Seats*" class="form-control" required />
+                <span asp-validation-for="PersonCount" class="text-danger"></span> <!-- Validation for PersonCount -->
+
+                <input asp-for="ReservationTime" type="time" class="form-control" required />
+                <span asp-validation-for="ReservationTime" class="text-danger"></span> <!-- Validation for ReservationTime -->
+            </div>
+            <div>
+                <input asp-for="Phone" type="tel" placeholder="Enter Your Phone Number" class="form-control" required />
+                <span asp-validation-for="Phone" class="text-danger"></span> <!-- Validation for Phone -->
+
+                <input asp-for="ReservationDate" type="date" placeholder="Date" class="form-control" required />
+                <span asp-validation-for="ReservationDate" class="text-danger"></span> <!-- Validation for ReservationDate -->
+
+                <input asp-for="Email" type="email" placeholder="Enter your email" class="form-control" required />
+                <span asp-validation-for="Email" class="text-danger"></span> <!-- Validation for Email -->
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Your Request</button>
+        </form>
+
+    </div>
+</section>
+
+<!-- reservation section end -->
+    Script{
+<script src="~/assets/js/reservation.js"></script>
+    }
